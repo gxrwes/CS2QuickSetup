@@ -3,7 +3,8 @@
 ## How to install
 - clone git repo or just copy the files i guess
 - enable console in cs2
-- open console and type
+- copy desired cfg to ```C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\game\csgo\cfg```
+- open console and type 
     ```exec "config u want to exec"```
     for eg:
     ```exec a ```
