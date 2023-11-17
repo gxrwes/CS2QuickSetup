@@ -1,6 +1,8 @@
 # CS2QuickSetup
 # GXRWes csgo setup
+
 ## How to install
+
 - clone git repo or just copy the files i guess
 - enable console in cs2
 - copy desired cfg to ```C:\Program Files (x86)\Steam\steamapps\common\Counter-Strike Global Offensive\game\csgo\cfg```
@@ -9,6 +11,7 @@
     for eg:
     ```exec a ```
 ## add to autostart
+
 - open steam/libary
 - rightclick on cs2
 - go to properties
