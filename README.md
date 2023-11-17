@@ -19,4 +19,3 @@
     ```-exec a```
     i have added some extra startup stuff aswell in my startup, still need to reconfigure for cs2
     ```-novid -exec a -freq 144 -nojoy -high```
-    test
