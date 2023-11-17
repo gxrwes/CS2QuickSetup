@@ -4,7 +4,7 @@
 - clone git repo or just copy the files i guess
 - enable console in cs2
 - open console and type
-    ```exec "config u want to exec"``
+    ```exec "config u want to exec"```
     for eg:
     ```exec a ```
 ## add to autostart
