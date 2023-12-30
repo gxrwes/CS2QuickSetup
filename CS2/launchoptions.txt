@@ -1,0 +1,1 @@
+-novid -exec a -freq 144 -nojoy -high
