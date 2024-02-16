@@ -1,0 +1,23 @@
+#Persistent ; Keep the script running
+Global taskbarSettingsOriginal := "" ; To store original taskbar settings
+
+#t:: ; Assign Win+T as the hotkey
+If (taskbarSettingsOriginal = "")
+{
+    ; Save the current taskbar settings before hiding
+    RegRead, taskbarSettingsOriginal, HKEY_CURRENT_USER, Software\Microsoft\Windows\CurrentVersion\Explorer\StuckRects3, Settings
+    ; Hide the taskbar
+    WinHide, ahk_class Shell_TrayWnd
+    WinHide, ahk_class Shell_SecondaryTrayWnd ; For multiple monitors
+}
+else
+{
+    ; Restore the taskbar with the original settings
+    RegWrite, REG_BINARY, HKEY_CURRENT_USER, Software\Microsoft\Windows\CurrentVersion\Explorer\StuckRects3, Settings, taskbarSettingsOriginal
+    taskbarSettingsOriginal := "" ; Clear the stored settings after restoring
+    ; Refresh the taskbar to apply the restored settings
+    WinShow, ahk_class Shell_TrayWnd
+    WinShow, ahk_class Shell_SecondaryTrayWnd ; For multiple monitors
+    SendMessage, 0x1A, 0, 0, , ahk_class Shell_TrayWnd ; WM_SETTINGCHANGE to refresh the taskbar
+}
+Return
