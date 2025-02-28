@@ -1,0 +1,15 @@
+C:\DEVD\Repos\CS2QuickSetup\ConfigCreator\ConfigCreator.Core\bin\Debug\net9.0\ConfigCreator.Core.deps.json
+C:\DEVD\Repos\CS2QuickSetup\ConfigCreator\ConfigCreator.Core\bin\Debug\net9.0\ConfigCreator.Core.dll
+C:\DEVD\Repos\CS2QuickSetup\ConfigCreator\ConfigCreator.Core\bin\Debug\net9.0\ConfigCreator.Core.pdb
+C:\DEVD\Repos\CS2QuickSetup\ConfigCreator\ConfigCreator.Core\obj\Debug\net9.0\ConfigCreator.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\DEVD\Repos\CS2QuickSetup\ConfigCreator\ConfigCreator.Core\obj\Debug\net9.0\ConfigCreator.Core.AssemblyInfoInputs.cache
+C:\DEVD\Repos\CS2QuickSetup\ConfigCreator\ConfigCreator.Core\obj\Debug\net9.0\ConfigCreator.Core.AssemblyInfo.cs
+C:\DEVD\Repos\CS2QuickSetup\ConfigCreator\ConfigCreator.Core\obj\Debug\net9.0\ConfigCreator.Core.csproj.CoreCompileInputs.cache
+C:\DEVD\Repos\CS2QuickSetup\ConfigCreator\ConfigCreator.Core\obj\Debug\net9.0\ConfigCreator.Core.sourcelink.json
+C:\DEVD\Repos\CS2QuickSetup\ConfigCreator\ConfigCreator.Core\obj\Debug\net9.0\ConfigCreator.Core.dll
+C:\DEVD\Repos\CS2QuickSetup\ConfigCreator\ConfigCreator.Core\obj\Debug\net9.0\refint\ConfigCreator.Core.dll
+C:\DEVD\Repos\CS2QuickSetup\ConfigCreator\ConfigCreator.Core\obj\Debug\net9.0\ConfigCreator.Core.pdb
+C:\DEVD\Repos\CS2QuickSetup\ConfigCreator\ConfigCreator.Core\obj\Debug\net9.0\ref\ConfigCreator.Core.dll
+C:\DEVD\Repos\CS2QuickSetup\ConfigCreator\ConfigCreator.Core\obj\Debug\net9.0\ConfigCreator.Core.csproj.AssemblyReference.cache
+C:\DEVD\Repos\CS2QuickSetup\ConfigCreator\ConfigCreator.Core\bin\Debug\net9.0\Resources\defaultCommands.json
+C:\DEVD\Repos\CS2QuickSetup\ConfigCreator\ConfigCreator.Core\bin\Debug\net9.0\Resources\defaultKeybinds.json

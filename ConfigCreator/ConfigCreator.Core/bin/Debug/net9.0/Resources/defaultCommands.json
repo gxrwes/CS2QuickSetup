@@ -1,0 +1,20 @@
+[
+    {
+        "Name": "Minimap Zoom",
+        "CommandBase": "echo \"{0}\"\nalias \"+radar\" \"+use; cl_radar_always_centered 1; cl_radar_scale {1}\"\nalias \"-radar\" \"-use; cl_radar_always_centered 0; cl_radar_scale {1}\"\nbind \"i\" \"+radar\"",
+        "Parameters": [
+            "Setting Minimap Zoom",
+            "PARAMETER"
+        ]
+    },
+    {
+        "Name": "Quick Commands",
+        "CommandBase": "alias \"{0}\" \"{1}\"\nalias \"{2}\" \"{3}\"",
+        "Parameters": [
+            "quit",
+            "exit",
+            "dc",
+            "disconnect"
+        ]
+    }    
+]

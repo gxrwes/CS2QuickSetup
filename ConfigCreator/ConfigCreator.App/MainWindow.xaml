@@ -1,0 +1,58 @@
+﻿<Window x:Class="ConfigCreator.App.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="CS2 Autoexec Config Generator" Height="600" Width="1000">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="350"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Left Panel: Chapters -->
+        <ScrollViewer Grid.Column="0" VerticalScrollBarVisibility="Auto">
+            <StackPanel Margin="10">
+                <!-- Chapter 1: Keybindings -->
+                <Expander Header="Keybindings" IsExpanded="True">
+                    <DataGrid x:Name="dgKeyBindings" AutoGenerateColumns="False" CanUserAddRows="False" ItemsSource="{Binding KeyBindings}" Margin="5">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Action" Binding="{Binding Action}" IsReadOnly="True" Width="100"/>
+                            <DataGridTextColumn Header="Key" Binding="{Binding Key}" Width="80"/>
+                            <DataGridTemplateColumn Header="Record" Width="100">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <Button Content="{Binding RecordButtonText}" Click="RecordButton_Click"/>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Expander>
+
+                <!-- Chapter 2: Commands -->
+                <Expander Header="Commands" IsExpanded="True" Margin="0,10,0,0">
+                    <DataGrid x:Name="dgCommands" AutoGenerateColumns="False" CanUserAddRows="False" ItemsSource="{Binding Commands}" Margin="5">
+                        <DataGrid.Columns>
+                            <DataGridCheckBoxColumn Header="Enabled" Binding="{Binding IsEnabled}" Width="50"/>
+                            <DataGridTextColumn Header="Name" Binding="{Binding Name}" IsReadOnly="True" Width="120"/>
+                            <DataGridTextColumn Header="Parameter" Binding="{Binding EditableParameter}" Width="*"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Expander>
+
+                <!-- Chapter 3: Custom Bindings -->
+                <Expander Header="Custom Bindings" IsExpanded="True" Margin="0,10,0,0">
+                    <TextBox x:Name="txtCustomBindings" AcceptsReturn="True" Height="100" Margin="5" TextWrapping="Wrap"/>
+                </Expander>
+
+                <!-- Generate and Download Buttons -->
+                <Button Content="Generate Config" Click="btnGenerate_Click" Margin="5" Height="30"/>
+                <Button Content="Download Config" Click="btnDownload_Click" Margin="5" Height="30"/>
+            </StackPanel>
+        </ScrollViewer>
+
+        <!-- Right Panel: Live Preview with Diff -->
+        <Grid Grid.Column="1" Margin="10">
+            <RichTextBox x:Name="rtbPreview" IsReadOnly="True" VerticalScrollBarVisibility="Auto"/>
+        </Grid>
+    </Grid>
+</Window>
