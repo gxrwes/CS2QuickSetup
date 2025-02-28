@@ -1,0 +1,86 @@
+[
+    {
+        "Key": "W",
+        "Value": "+forward"
+    },
+    {
+        "Key": "A",
+        "Value": "+moveleft"
+    },
+    {
+        "Key": "S",
+        "Value": "+back"
+    },
+    {
+        "Key": "D",
+        "Value": "+moveright"
+    },
+    {
+        "Key": "Space",
+        "Value": "+jump"
+    },
+    {
+        "Key": "Ctrl",
+        "Value": "+duck"
+    },
+    {
+        "Key": "Shift",
+        "Value": "+speed"
+    },
+    {
+        "Key": "Mouse1",
+        "Value": "+attack"
+    },
+    {
+        "Key": "Mouse2",
+        "Value": "+attack2"
+    },
+    {
+        "Key": "R",
+        "Value": "+reload"
+    },
+    {
+        "Key": "F",
+        "Value": "+use"
+    },
+    {
+        "Key": "E",
+        "Value": "+use"
+    },
+    {
+        "Key": "1",
+        "Value": "slot1"
+    },
+    {
+        "Key": "2",
+        "Value": "slot2"
+    },
+    {
+        "Key": "3",
+        "Value": "slot3"
+    },
+    {
+        "Key": "4",
+        "Value": "slot4"
+    },
+    {
+        "Key": "B",
+        "Value": "buymenu"
+    },
+    {
+        "Key": "M",
+        "Value": "teammenu"
+    },
+    {
+        "Key": "G",
+        "Value": "drop"
+    },
+    {
+        "Key": "C",
+        "Value": "+voicerecord"
+    },
+    {
+        "Key": "Tab",
+        "Value": "+score"
+    }
+]

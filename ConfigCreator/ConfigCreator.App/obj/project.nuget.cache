@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "PpQ00KS+pgc=",
+  "success": true,
+  "projectFilePath": "C:\\DEVD\\Repos\\CS2QuickSetup\\ConfigCreator\\ConfigCreator.App\\ConfigCreator.App.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\wesle\\.nuget\\packages\\figgle\\0.5.1\\figgle.0.5.1.nupkg.sha512"
+  ],
+  "logs": []
+}

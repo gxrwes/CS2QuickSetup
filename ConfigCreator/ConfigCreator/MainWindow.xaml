@@ -1,0 +1,41 @@
+﻿<TabControl>
+    <TabItem Header="Generate">
+        <StackPanel Margin="10">
+
+            <!-- Keybinds Table -->
+            <TextBlock Text="Keybinds" FontSize="16" FontWeight="Bold"/>
+            <DataGrid ItemsSource="{Binding Keybinds}" AutoGenerateColumns="False" HeadersVisibility="Column">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Action" Binding="{Binding Action}" Width="*"/>
+                    <DataGridTextColumn Header="Keybind" Binding="{Binding Key}" Width="*"/>
+                    <DataGridTemplateColumn Header="Record">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Content="{Binding DataContext.IsRecording, RelativeSource={RelativeSource AncestorType=Window}, Converter={StaticResource BoolToRecordingTextConverter}}"
+                                        Background="{Binding DataContext.IsRecording, RelativeSource={RelativeSource AncestorType=Window}, Converter={StaticResource BoolToRecordingColorConverter}}"
+                                        Command="{Binding DataContext.RecordKeybindCommand, RelativeSource={RelativeSource AncestorType=Window}}"
+                                        CommandParameter="{Binding}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+
+            <Separator/>
+
+            <!-- Functionality Blocks -->
+            <TextBlock Text="Functionality Blocks" FontSize="16" FontWeight="Bold"/>
+            <ListBox ItemsSource="{Binding AvailableFixtures}" DisplayMemberPath="Name" Height="150"/>
+            <Button Content="Add Selected Block" Command="{Binding AddFixtureCommand}"/>
+
+            <Separator/>
+
+            <!-- Generate Button -->
+            <Button Content="Generate Config" Command="{Binding GenerateConfigCommand}" Margin="5"/>
+
+            <!-- Preview -->
+            <TextBlock Text="Config Preview" FontSize="16" FontWeight="Bold"/>
+            <TextBox Text="{Binding ConfigPreview}" Height="200" IsReadOnly="True"/>
+        </StackPanel>
+    </TabItem>
+</TabControl>

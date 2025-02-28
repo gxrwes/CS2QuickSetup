@@ -1,0 +1,14 @@
+[
+    {
+        "id": "radar_zoom",
+        "name": "Radar Zoom",
+        "description": "Enables a zoom function on the radar when pressing 'I'.",
+        "content": "alias \"+radar\" \"+use; cl_radar_always_centered 1; cl_radar_scale 0.15\"\n"
+    },
+    {
+        "id": "autoexec_base",
+        "name": "Base Autoexec",
+        "description": "Basic autoexec setup with essential settings.",
+        "content": "con_enable \"1\"\nshowconsole\necho Autoexec by ConfigCreator\n"
+    }
+]

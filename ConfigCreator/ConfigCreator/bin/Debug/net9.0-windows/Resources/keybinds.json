@@ -1,0 +1,82 @@
+[
+    {
+        "action": "+forward",
+        "key": "w"
+    },
+    {
+        "action": "+back",
+        "key": "s"
+    },
+    {
+        "action": "+left",
+        "key": "a"
+    },
+    {
+        "action": "+right",
+        "key": "d"
+    },
+    {
+        "action": "+jump",
+        "key": "space"
+    },
+    {
+        "action": "+duck",
+        "key": "ctrl"
+    },
+    {
+        "action": "+attack",
+        "key": "mouse1"
+    },
+    {
+        "action": "+attack2",
+        "key": "mouse2"
+    },
+    {
+        "action": "+reload",
+        "key": "r"
+    },
+    {
+        "action": "+use",
+        "key": "e"
+    },
+    {
+        "action": "lastinv",
+        "key": "q"
+    },
+    {
+        "action": "drop",
+        "key": "g"
+    },
+    {
+        "action": "buymenu",
+        "key": "b"
+    },
+    {
+        "action": "+showscores",
+        "key": "tab"
+    },
+    {
+        "action": "voice_modenable_toggle",
+        "key": "m"
+    },
+    {
+        "action": "messagemode",
+        "key": "enter"
+    },
+    {
+        "action": "messagemode2",
+        "key": "j"
+    },
+    {
+        "action": "radio1",
+        "key": "z"
+    },
+    {
+        "action": "radio2",
+        "key": "x"
+    },
+    {
+        "action": "+voicerecord",
+        "key": "mouse5"
+    }
+]
