@@ -1,13 +1,12 @@
-name: Build, Test and Release
-
+name: Build, Test and Deploy
 
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
-  build-deploy:
+  build:
     runs-on: windows-latest
     steps:
       - name: Checkout repository
@@ -24,16 +23,53 @@ jobs:
       - name: Build solution
         run: dotnet build ConfigCreator/ConfigCreator.sln --configuration Release
 
-      - name: Run tests
-        run: dotnet test ConfigCreator/Testing/Testing.csproj --configuration Release --no-build
-
       - name: Publish WPF App
         run: dotnet publish ConfigCreator/ConfigCreator.App/ConfigCreator.App.csproj --configuration Release --output published
 
-      - name: Create ZIP archive
+      - name: Create ZIP archive of published app
         run: Compress-Archive -Path published\* -DestinationPath release.zip
 
-      - name: Create Release
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: app-build
+          path: release.zip
+
+  test:
+    runs-on: windows-latest
+    needs: build
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '6.0.x'
+
+      - name: Restore dependencies
+        run: dotnet restore ConfigCreator/ConfigCreator.sln
+
+      - name: Run tests
+        run: dotnet test ConfigCreator/Testing/Testing.csproj --configuration Release --logger "trx;LogFileName=test_results.trx"
+
+      - name: Upload test results artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-results
+          path: '**/TestResults/*.trx'
+
+  deploy:
+    runs-on: windows-latest
+    needs: test
+    steps:
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: app-build
+          path: .
+
+      - name: Create GitHub Release
         id: create_release
         uses: actions/create-release@v1
         env:
