@@ -74,7 +74,6 @@ jobs:
           commit=$(git rev-parse --short HEAD)
           release_version="${version}-${commit}"
           echo "release_version=$release_version" >> $GITHUB_OUTPUT
-
       - name: Download build artifact
         uses: actions/download-artifact@v4
         with:
