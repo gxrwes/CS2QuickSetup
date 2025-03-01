@@ -23,6 +23,13 @@ namespace ConfigCreator.App
         private string _previousConfig = "";
         private ConfigGenerator configGenerator;
 
+        private CommandViewModel _selectedCommand;
+        public CommandViewModel SelectedCommand
+        {
+            get => _selectedCommand;
+            set { _selectedCommand = value; OnPropertyChanged("SelectedCommand"); }
+        }
+
         public MainWindow()
         {
             InitializeComponent();
@@ -46,12 +53,17 @@ namespace ConfigCreator.App
             );
 
             // Map loaded commands into the Commands ObservableCollection.
+            // EditableParameter is set as a semicolon-separated string.
+            // ParameterHelper is joined from the ParameterDescription list.
+            // CommandBase is saved so that we can simply pass it through when generating the config.
             Commands = new ObservableCollection<CommandViewModel>(
                 defaults.Commands.Select(c => new CommandViewModel
                 {
                     Name = c.Name,
-                    EditableParameter = c.Parameters != null && c.Parameters.Count > 0 ? c.Parameters[0] : "",
-                    IsEnabled = true
+                    CommandBase = c.CommandBase,
+                    EditableParameter = c.Parameters != null && c.Parameters.Count > 0 ? string.Join(";", c.Parameters) : "",
+                    IsEnabled = true,
+                    ParameterHelper = c.ParameterDescription != null ? string.Join("; ", c.ParameterDescription) : ""
                 })
             );
 
@@ -59,61 +71,35 @@ namespace ConfigCreator.App
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
-        protected void OnPropertyChanged(string propertyName)
-        {
+        protected void OnPropertyChanged(string propertyName) =>
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
-        }
 
         private void btnGenerate_Click(object sender, RoutedEventArgs e)
         {
             // Create a GeneratedConfig from the view models.
             var genConfig = new GeneratedConfig();
             // Map key bindings (we assume Action is the command value)
-            genConfig.KeyBindings = KeyBindings.Select(k => new Core.Models.KeyBinding { Key = k.Key, Value = k.Action }).ToList();
+            genConfig.KeyBindings = KeyBindings
+                .Select(k => new Core.Models.KeyBinding { Key = k.Key, Value = k.Action })
+                .ToList();
 
-            // Map commands based on their Name.
+            // Map commands using the default CommandBase from JSON.
+            // EditableParameter (entered by the user) is split by semicolons into a list.
             genConfig.Commands = Commands
                 .Where(c => c.IsEnabled)
                 .Select(c =>
                 {
-                    if (c.Name == "Loading Message")
+                    var parameters = c.EditableParameter
+                        .Split(new char[] { ';' }, StringSplitOptions.RemoveEmptyEntries)
+                        .Select(p => p.Trim())
+                        .ToList();
+
+                    return new Command
                     {
-                        return new Command
-                        {
-                            Name = c.Name,
-                            CommandBase = "echo \"{0}\"",
-                            Parameters = new System.Collections.Generic.List<string> { c.EditableParameter }
-                        };
-                    }
-                    else if (c.Name == "Minimap Zoom")
-                    {
-                        // EditableParameter here is assumed to be the scale value.
-                        return new Command
-                        {
-                            Name = c.Name,
-                            CommandBase = "echo \"Setting Minimap Zoom\"\nalias \"+radar\" \"+use; cl_radar_always_centered 1; cl_radar_scale {0}\"\nalias \"-radar\" \"-use; cl_radar_always_centered 0; cl_radar_scale {0}\"\nbind \"i\" \"+radar\"",
-                            Parameters = new System.Collections.Generic.List<string> { c.EditableParameter }
-                        };
-                    }
-                    else if (c.Name == "Quick Commands")
-                    {
-                        // Use default parameters for quick commands.
-                        return new Command
-                        {
-                            Name = c.Name,
-                            CommandBase = "alias \"{0}\" \"{1}\"\nalias \"{2}\" \"{3}\"",
-                            Parameters = new System.Collections.Generic.List<string> { "quit", "exit", "dc", "disconnect" }
-                        };
-                    }
-                    else
-                    {
-                        return new Command
-                        {
-                            Name = c.Name,
-                            CommandBase = "echo \"{0}\"",
-                            Parameters = new System.Collections.Generic.List<string> { c.EditableParameter }
-                        };
-                    }
+                        Name = c.Name,
+                        CommandBase = c.CommandBase,
+                        Parameters = parameters
+                    };
                 }).ToList();
 
             // Append custom bindings (if any) directly.
@@ -128,17 +114,19 @@ namespace ConfigCreator.App
                 genConfig.Commands.Add(customCommand);
             }
 
-            // Generate configuration text
+            // Generate configuration text.
             string newConfig = configGenerator.GenerateConfig(genConfig);
             UpdatePreview(newConfig);
         }
 
         private void btnDownload_Click(object sender, RoutedEventArgs e)
         {
-            // Use SaveFileDialog from Microsoft.Win32 to let the user select a location to save the file.
-            SaveFileDialog dlg = new SaveFileDialog();
-            dlg.Filter = "Config Files (*.cfg)|*.cfg|All Files (*.*)|*.*";
-            dlg.FileName = "autoexec.cfg";
+            // Use SaveFileDialog to let the user select a location to save the file.
+            SaveFileDialog dlg = new SaveFileDialog
+            {
+                Filter = "Config Files (*.cfg)|*.cfg|All Files (*.*)|*.*",
+                FileName = "autoexec.cfg"
+            };
 
             if (dlg.ShowDialog() == true)
             {
@@ -159,7 +147,9 @@ namespace ConfigCreator.App
             // Simple diff: compare new config lines with previous lines.
             rtbPreview.Document.Blocks.Clear();
             var newLines = newConfig.Split(new[] { "\r\n", "\n" }, StringSplitOptions.None);
-            var oldLines = string.IsNullOrEmpty(_previousConfig) ? new string[0] : _previousConfig.Split(new[] { "\r\n", "\n" }, StringSplitOptions.None);
+            var oldLines = string.IsNullOrEmpty(_previousConfig)
+                ? new string[0]
+                : _previousConfig.Split(new[] { "\r\n", "\n" }, StringSplitOptions.None);
 
             var paragraph = new Paragraph();
             for (int i = 0; i < newLines.Length; i++)
@@ -245,6 +235,13 @@ namespace ConfigCreator.App
             get => _name;
             set { _name = value; OnPropertyChanged("Name"); }
         }
+        // Added CommandBase property so we can access the default template.
+        private string _commandBase;
+        public string CommandBase
+        {
+            get => _commandBase;
+            set { _commandBase = value; OnPropertyChanged("CommandBase"); }
+        }
         private string _editableParameter;
         public string EditableParameter
         {
@@ -256,6 +253,12 @@ namespace ConfigCreator.App
         {
             get => _isEnabled;
             set { _isEnabled = value; OnPropertyChanged("IsEnabled"); }
+        }
+        private string _parameterHelper;
+        public string ParameterHelper
+        {
+            get => _parameterHelper;
+            set { _parameterHelper = value; OnPropertyChanged("ParameterHelper"); }
         }
         public event PropertyChangedEventHandler PropertyChanged;
         protected void OnPropertyChanged(string propertyName) =>

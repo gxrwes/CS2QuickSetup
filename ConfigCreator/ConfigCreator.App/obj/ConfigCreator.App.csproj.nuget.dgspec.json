@@ -78,7 +78,7 @@
       }
     },
     "C:\\DEVD\\Repos\\CS2QuickSetup\\ConfigCreator\\ConfigCreator.Core\\ConfigCreator.Core.csproj": {
-      "version": "1.0.0",
+      "version": "1.0.2",
       "restore": {
         "projectUniqueName": "C:\\DEVD\\Repos\\CS2QuickSetup\\ConfigCreator\\ConfigCreator.Core\\ConfigCreator.Core.csproj",
         "projectName": "ConfigCreator.Core",

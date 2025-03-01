@@ -15,7 +15,7 @@
           }
         }
       },
-      "ConfigCreator.Core/1.0.0": {
+      "ConfigCreator.Core/1.0.2": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
         "dependencies": {
@@ -46,7 +46,7 @@
         "logo-square-256px.png"
       ]
     },
-    "ConfigCreator.Core/1.0.0": {
+    "ConfigCreator.Core/1.0.2": {
       "type": "project",
       "path": "../ConfigCreator.Core/ConfigCreator.Core.csproj",
       "msbuildProject": "../ConfigCreator.Core/ConfigCreator.Core.csproj"
@@ -54,7 +54,7 @@
   },
   "projectFileDependencyGroups": {
     "net9.0-windows7.0": [
-      "ConfigCreator.Core >= 1.0.0"
+      "ConfigCreator.Core >= 1.0.2"
     ]
   },
   "packageFolders": {

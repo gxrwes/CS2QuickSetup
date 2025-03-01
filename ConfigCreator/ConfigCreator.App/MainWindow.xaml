@@ -30,13 +30,25 @@
 
                 <!-- Chapter 2: Commands -->
                 <Expander Header="Commands" IsExpanded="True" Margin="0,10,0,0">
-                    <DataGrid x:Name="dgCommands" AutoGenerateColumns="False" CanUserAddRows="False" ItemsSource="{Binding Commands}" Margin="5">
-                        <DataGrid.Columns>
-                            <DataGridCheckBoxColumn Header="Enabled" Binding="{Binding IsEnabled}" Width="50"/>
-                            <DataGridTextColumn Header="Name" Binding="{Binding Name}" IsReadOnly="True" Width="120"/>
-                            <DataGridTextColumn Header="Parameter" Binding="{Binding EditableParameter}" Width="*"/>
-                        </DataGrid.Columns>
-                    </DataGrid>
+                    <StackPanel Margin="5">
+                        <DataGrid x:Name="dgCommands" AutoGenerateColumns="False" CanUserAddRows="False" ItemsSource="{Binding Commands}" SelectedItem="{Binding SelectedCommand, Mode=TwoWay}">
+                            <DataGrid.Columns>
+                                <DataGridCheckBoxColumn Header="Enabled" Binding="{Binding IsEnabled}" Width="50"/>
+                                <DataGridTextColumn Header="Name" Binding="{Binding Name}" IsReadOnly="True" Width="120"/>
+                                <DataGridTextColumn Header="Parameter" Binding="{Binding EditableParameter}" Width="*">
+                                    <DataGridTextColumn.ElementStyle>
+                                        <Style TargetType="TextBlock">
+                                            <Setter Property="ToolTip" Value="Enter parameters separated by semicolons (e.g., m;0;0.1)"/>
+                                        </Style>
+                                    </DataGridTextColumn.ElementStyle>
+                                </DataGridTextColumn>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                        <!-- Info box for parameter helpers -->
+                        <TextBlock Text="{Binding SelectedCommand.ParameterHelper}" Margin="5" TextWrapping="Wrap" Foreground="Gray" 
+                                   ToolTip="Parameter helper for the selected command"/>
+                        <TextBlock Text="(Enter parameters separated by semicolons, e.g., m;0;0.1)" Margin="5" FontStyle="Italic" Foreground="DarkGray"/>
+                    </StackPanel>
                 </Expander>
 
                 <!-- Chapter 3: Custom Bindings -->

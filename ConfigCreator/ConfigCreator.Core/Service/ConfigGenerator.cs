@@ -14,6 +14,7 @@ namespace ConfigCreator.Core.Service
         /// Generates a complete CS2 autoexec configuration file as a string.
         /// Only the top welcome message is rendered as ASCII art (with each line commented out)
         /// to prevent breaking the .cfg file. The rest of the configuration is output normally.
+        /// At the end, a semicolon is appended to every non-empty line that does not start with a comment.
         /// </summary>
         /// <param name="config">The dynamic configuration data containing key bindings and commands.</param>
         /// <returns>A string representing the configuration file.</returns>
@@ -93,7 +94,22 @@ namespace ConfigCreator.Core.Service
             // --- Footer ---
             sb.AppendLine("echo \"End of cfg\"");
 
-            return sb.ToString();
+            // --- Append ";" to every line that is not empty or starting with the comment ---
+            string configText = sb.ToString();
+            var lines = configText.Split(new[] { "\r\n", "\n" }, StringSplitOptions.None);
+            var finalSb = new StringBuilder();
+            foreach (var line in lines)
+            {
+                if (!string.IsNullOrWhiteSpace(line) && !line.TrimStart().StartsWith(CommentChar))
+                {
+                    finalSb.AppendLine(line + ";");
+                }
+                else
+                {
+                    finalSb.AppendLine(line);
+                }
+            }
+            return finalSb.ToString();
         }
 
         /// <summary>

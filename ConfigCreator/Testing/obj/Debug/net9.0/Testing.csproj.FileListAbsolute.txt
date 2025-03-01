@@ -1,6 +1,8 @@
 C:\DEVD\Repos\CS2QuickSetup\ConfigCreator\Testing\bin\Debug\net9.0\.msCoverageSourceRootsMapping_Testing
 C:\DEVD\Repos\CS2QuickSetup\ConfigCreator\Testing\bin\Debug\net9.0\CoverletSourceRootsMapping_Testing
 C:\DEVD\Repos\CS2QuickSetup\ConfigCreator\Testing\bin\Debug\net9.0\testhost.dll
+C:\DEVD\Repos\CS2QuickSetup\ConfigCreator\Testing\bin\Debug\net9.0\Resources\defaultCommands.json
+C:\DEVD\Repos\CS2QuickSetup\ConfigCreator\Testing\bin\Debug\net9.0\Resources\defaultKeybinds.json
 C:\DEVD\Repos\CS2QuickSetup\ConfigCreator\Testing\bin\Debug\net9.0\testhost.exe
 C:\DEVD\Repos\CS2QuickSetup\ConfigCreator\Testing\bin\Debug\net9.0\NUnit3.TestAdapter.dll
 C:\DEVD\Repos\CS2QuickSetup\ConfigCreator\Testing\bin\Debug\net9.0\NUnit3.TestAdapter.pdb
@@ -12,6 +14,7 @@ C:\DEVD\Repos\CS2QuickSetup\ConfigCreator\Testing\bin\Debug\net9.0\Testing.deps.
 C:\DEVD\Repos\CS2QuickSetup\ConfigCreator\Testing\bin\Debug\net9.0\Testing.runtimeconfig.json
 C:\DEVD\Repos\CS2QuickSetup\ConfigCreator\Testing\bin\Debug\net9.0\Testing.dll
 C:\DEVD\Repos\CS2QuickSetup\ConfigCreator\Testing\bin\Debug\net9.0\Testing.pdb
+C:\DEVD\Repos\CS2QuickSetup\ConfigCreator\Testing\bin\Debug\net9.0\Figgle.dll
 C:\DEVD\Repos\CS2QuickSetup\ConfigCreator\Testing\bin\Debug\net9.0\Microsoft.VisualStudio.CodeCoverage.Shim.dll
 C:\DEVD\Repos\CS2QuickSetup\ConfigCreator\Testing\bin\Debug\net9.0\Microsoft.TestPlatform.CoreUtilities.dll
 C:\DEVD\Repos\CS2QuickSetup\ConfigCreator\Testing\bin\Debug\net9.0\Microsoft.TestPlatform.PlatformAbstractions.dll
@@ -102,4 +105,3 @@ C:\DEVD\Repos\CS2QuickSetup\ConfigCreator\Testing\obj\Debug\net9.0\refint\Testin
 C:\DEVD\Repos\CS2QuickSetup\ConfigCreator\Testing\obj\Debug\net9.0\Testing.pdb
 C:\DEVD\Repos\CS2QuickSetup\ConfigCreator\Testing\obj\Debug\net9.0\Testing.genruntimeconfig.cache
 C:\DEVD\Repos\CS2QuickSetup\ConfigCreator\Testing\obj\Debug\net9.0\ref\Testing.dll
-C:\DEVD\Repos\CS2QuickSetup\ConfigCreator\Testing\bin\Debug\net9.0\Figgle.dll
