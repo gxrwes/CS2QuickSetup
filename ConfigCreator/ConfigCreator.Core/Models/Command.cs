@@ -10,6 +10,7 @@ namespace ConfigCreator.Core.Models
         public string Name { get; set; }
         public string CommandBase { get; set; }
         public List<string> Parameters { get; set; }
+        public List<string> ParameterDescription { get; set; }  // Helper text for each parameter
 
         /// <summary>
         /// Replaces placeholders in CommandBase with parameters.

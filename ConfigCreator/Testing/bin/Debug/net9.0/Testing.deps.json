@@ -8,7 +8,7 @@
     ".NETCoreApp,Version=v9.0": {
       "Testing/1.0.0": {
         "dependencies": {
-          "ConfigCreator.Core": "1.0.0",
+          "ConfigCreator.Core": "1.0.2",
           "Microsoft.NET.Test.Sdk": "17.12.0",
           "NUnit": "4.2.2",
           "NUnit.Analyzers": "4.4.0",
@@ -311,14 +311,14 @@
       "NUnit.Analyzers/4.4.0": {},
       "NUnit3TestAdapter/4.6.0": {},
       "System.Reflection.Metadata/1.6.0": {},
-      "ConfigCreator.Core/1.0.0": {
+      "ConfigCreator.Core/1.0.2": {
         "dependencies": {
           "Figgle": "0.5.1"
         },
         "runtime": {
           "ConfigCreator.Core.dll": {
-            "assemblyVersion": "1.0.0",
-            "fileVersion": "1.0.0.0"
+            "assemblyVersion": "1.0.2",
+            "fileVersion": "1.0.2"
           }
         }
       }
@@ -407,7 +407,7 @@
       "path": "system.reflection.metadata/1.6.0",
       "hashPath": "system.reflection.metadata.1.6.0.nupkg.sha512"
     },
-    "ConfigCreator.Core/1.0.0": {
+    "ConfigCreator.Core/1.0.2": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

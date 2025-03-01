@@ -6,7 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v9.0": {
-      "ConfigCreator.Core/1.0.0": {
+      "ConfigCreator.Core/1.0.2": {
         "dependencies": {
           "Figgle": "0.5.1"
         },
@@ -25,7 +25,7 @@
     }
   },
   "libraries": {
-    "ConfigCreator.Core/1.0.0": {
+    "ConfigCreator.Core/1.0.2": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

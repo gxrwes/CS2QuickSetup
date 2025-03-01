@@ -1,14 +1,29 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <!-- Default version if version.txt is missing -->
+    <Version>1.0.2</Version>
+    <AssemblyVersion>$(Version)</AssemblyVersion>
+    <FileVersion>$(Version)</FileVersion>
+    <InformationalVersion>$(Version)</InformationalVersion>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Helpers\" />
-  </ItemGroup>
+  <!-- This target runs before GenerateAssemblyInfo and sets version from version.txt -->
+  <Target Name="SetVersionFromFile" BeforeTargets="GenerateAssemblyInfo">
+    <!-- Adjust the relative path if necessary. Here we assume version.txt is in the solution root -->
+    <ReadLinesFromFile File="$(MSBuildProjectDirectory)\..\..\version.txt" ContinueOnError="true">
+      <Output TaskParameter="Lines" ItemName="VersionLines" />
+    </ReadLinesFromFile>
+    <PropertyGroup>
+      <!-- If version.txt contains a non-empty line, use its first line as the version -->
+      <Version Condition=" '@(VersionLines)' != '' ">%(VersionLines.Identity)</Version>
+      <AssemblyVersion>$(Version)</AssemblyVersion>
+      <FileVersion>$(Version)</FileVersion>
+      <InformationalVersion>$(Version)</InformationalVersion>
+    </PropertyGroup>
+  </Target>
 
   <ItemGroup>
     <PackageReference Include="Figgle" Version="0.5.1" />
@@ -22,5 +37,4 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
-
 </Project>
