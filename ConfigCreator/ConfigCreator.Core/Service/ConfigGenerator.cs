@@ -9,7 +9,7 @@ namespace ConfigCreator.Core.Service
 {
     public class ConfigGenerator
     {
-        public const string CommentChar = "#";
+        public const string CommentChar = "//";
         /// <summary>
         /// Generates a complete CS2 autoexec configuration file as a string.
         /// Only the top welcome message is rendered as ASCII art (with each line commented out)

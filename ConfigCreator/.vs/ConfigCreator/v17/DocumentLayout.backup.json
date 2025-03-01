@@ -59,21 +59,19 @@
               "RelativeToolTip": "ConfigCreator.Core\\Version.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAAAnwA8AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-01T15:51:10.627Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-01T15:51:10.627Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "ConfigCreator.App",
+              "Title": "ConfigCreator.App.csproj",
               "DocumentMoniker": "C:\\DEVD\\Repos\\CS2QuickSetup\\ConfigCreator\\ConfigCreator.App\\ConfigCreator.App.csproj",
               "RelativeDocumentMoniker": "ConfigCreator.App\\ConfigCreator.App.csproj",
               "ToolTip": "C:\\DEVD\\Repos\\CS2QuickSetup\\ConfigCreator\\ConfigCreator.App\\ConfigCreator.App.csproj",
               "RelativeToolTip": "ConfigCreator.App\\ConfigCreator.App.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-03-01T15:49:24.261Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-01T15:49:24.261Z"
             },
             {
               "$type": "Document",
@@ -84,8 +82,7 @@
               "ToolTip": "C:\\DEVD\\Repos\\CS2QuickSetup\\ConfigCreator\\ConfigCreator.App\\ConfigCreator.App.csproj",
               "RelativeToolTip": "ConfigCreator.App\\ConfigCreator.App.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-03-01T15:50:40.674Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-01T15:50:40.674Z"
             },
             {
               "$type": "Document",
@@ -96,8 +93,7 @@
               "ToolTip": "C:\\DEVD\\Repos\\CS2QuickSetup\\ConfigCreator\\ConfigCreator.Core\\ConfigCreator.Core.csproj",
               "RelativeToolTip": "ConfigCreator.Core\\ConfigCreator.Core.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-03-01T15:50:18.201Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-01T15:50:18.201Z"
             }
           ]
         }
