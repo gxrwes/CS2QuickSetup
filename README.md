@@ -1,6 +1,6 @@
 # CS2QuickSetup
 
-![CS2 Config Creator](./_screenshots/mainapp.png)
+![CS2 Config Creator](image.png)
 
 ## Overview
 CS2QuickSetup is a tool designed to simplify the process of configuring Counter-Strike 2 (CS2). The primary feature is the **CS2 Config Creator**, a WPF application that allows users to dynamically generate and manage CS2 configurations, including key bindings and command aliases. This replaces the previous static configurations but retains compatibility for those who still prefer them.
