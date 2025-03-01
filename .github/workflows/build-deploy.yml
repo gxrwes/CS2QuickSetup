@@ -63,7 +63,6 @@ jobs:
     runs-on: windows-latest
     needs: test
     steps:
-<<<<<<< HEAD
       - name: Checkout repository
         uses: actions/checkout@v2
 
@@ -76,8 +75,6 @@ jobs:
           release_version="${version}-${commit}"
           echo "release_version=$release_version" >> $GITHUB_OUTPUT
 
-=======
->>>>>>> 37ca5cff5a7cbba0fb5b21b8f3176b4581b68046
       - name: Download build artifact
         uses: actions/download-artifact@v4
         with:
