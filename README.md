@@ -129,11 +129,21 @@ The project uses GitHub Actions to automate builds and tests. Every pull request
 - Runs unit tests.
 - Creates a ZIP archive for release.
 
+## Other Tools
+Located in the /other folder
+
+### kill-unwanted-apps
+kills background tasks when you wanna run cs at max fps, needs to be run as Admin *handle with care*
+
 ## Support
 For issues and feature requests, create an issue on **[GitHub Issues](https://github.com/gxrwes/CS2QuickSetup/issues)**.
 
 ## License
-This project is licensed under the **Good Luck With That License**.
+
+This project is available under two different licenses:
+
+- **Non-Commercial Use** — free under the [Non-Commercial Use License v1.0](LICENSE-NC).  
+- **Commercial Use** — requires a paid commercial license. Please see [LICENSE-COMMERCIAL] or contact you@example.com for terms.
 
 ---
 _This README was last updated on [DATE]._
