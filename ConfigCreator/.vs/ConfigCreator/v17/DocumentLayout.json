@@ -3,16 +3,24 @@
   "WorkspaceRootPath": "C:\\DEVD\\Repos\\CS2QuickSetup\\ConfigCreator\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{44CF34BD-DE7E-410A-ACAF-7A30A14384B6}|ConfigCreator.Core\\ConfigCreator.Core.csproj|c:\\devd\\repos\\cs2quicksetup\\configcreator\\configcreator.core\\resources\\defaultcommands.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{44CF34BD-DE7E-410A-ACAF-7A30A14384B6}|ConfigCreator.Core\\ConfigCreator.Core.csproj|solutionrelative:configcreator.core\\resources\\defaultcommands.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44CF34BD-DE7E-410A-ACAF-7A30A14384B6}|ConfigCreator.Core\\ConfigCreator.Core.csproj|c:\\devd\\repos\\cs2quicksetup\\configcreator\\configcreator.core\\configcreator.core.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{44CF34BD-DE7E-410A-ACAF-7A30A14384B6}|ConfigCreator.Core\\ConfigCreator.Core.csproj|solutionrelative:configcreator.core\\configcreator.core.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44CF34BD-DE7E-410A-ACAF-7A30A14384B6}|ConfigCreator.Core\\ConfigCreator.Core.csproj|c:\\devd\\repos\\cs2quicksetup\\configcreator\\configcreator.core\\version.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44CF34BD-DE7E-410A-ACAF-7A30A14384B6}|ConfigCreator.Core\\ConfigCreator.Core.csproj|solutionrelative:configcreator.core\\version.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{44CF34BD-DE7E-410A-ACAF-7A30A14384B6}|ConfigCreator.Core\\ConfigCreator.Core.csproj|c:\\devd\\repos\\cs2quicksetup\\configcreator\\configcreator.core\\service\\configgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{44CF34BD-DE7E-410A-ACAF-7A30A14384B6}|ConfigCreator.Core\\ConfigCreator.Core.csproj|solutionrelative:configcreator.core\\service\\configgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{44CF34BD-DE7E-410A-ACAF-7A30A14384B6}|ConfigCreator.Core\\ConfigCreator.Core.csproj|c:\\devd\\repos\\cs2quicksetup\\configcreator\\configcreator.core\\models\\generatedconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{44CF34BD-DE7E-410A-ACAF-7A30A14384B6}|ConfigCreator.Core\\ConfigCreator.Core.csproj|solutionrelative:configcreator.core\\models\\generatedconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{44CF34BD-DE7E-410A-ACAF-7A30A14384B6}|ConfigCreator.Core\\ConfigCreator.Core.csproj|c:\\devd\\repos\\cs2quicksetup\\configcreator\\configcreator.core\\version.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{44CF34BD-DE7E-410A-ACAF-7A30A14384B6}|ConfigCreator.Core\\ConfigCreator.Core.csproj|solutionrelative:configcreator.core\\version.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D25D595F-A9BA-45C9-9072-12DF4BCDE2F2}|Testing\\Testing.csproj|c:\\devd\\repos\\cs2quicksetup\\configcreator\\testing\\configgeneratorunittest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -38,15 +46,44 @@
       "DocumentGroups": [
         {
           "DockedWidth": 341,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ConfigCreator.Core.csproj",
+              "DocumentMoniker": "C:\\DEVD\\Repos\\CS2QuickSetup\\ConfigCreator\\ConfigCreator.Core\\ConfigCreator.Core.csproj",
+              "RelativeDocumentMoniker": "ConfigCreator.Core\\ConfigCreator.Core.csproj",
+              "ToolTip": "C:\\DEVD\\Repos\\CS2QuickSetup\\ConfigCreator\\ConfigCreator.Core\\ConfigCreator.Core.csproj",
+              "RelativeToolTip": "ConfigCreator.Core\\ConfigCreator.Core.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAABiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-05-10T11:26:07.017Z"
+            },
+            {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "defaultCommands.json",
+              "DocumentMoniker": "C:\\DEVD\\Repos\\CS2QuickSetup\\ConfigCreator\\ConfigCreator.Core\\Resources\\defaultCommands.json",
+              "RelativeDocumentMoniker": "ConfigCreator.Core\\Resources\\defaultCommands.json",
+              "ToolTip": "C:\\DEVD\\Repos\\CS2QuickSetup\\ConfigCreator\\ConfigCreator.Core\\Resources\\defaultCommands.json",
+              "RelativeToolTip": "ConfigCreator.Core\\Resources\\defaultCommands.json",
+              "ViewState": "AgIAABkAAAAAAAAAAAAUwDAAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-10T11:23:54.602Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "ConfigGenerator.cs",
               "DocumentMoniker": "C:\\DEVD\\Repos\\CS2QuickSetup\\ConfigCreator\\ConfigCreator.Core\\Service\\ConfigGenerator.cs",
               "RelativeDocumentMoniker": "ConfigCreator.Core\\Service\\ConfigGenerator.cs",
@@ -54,12 +91,11 @@
               "RelativeToolTip": "ConfigCreator.Core\\Service\\ConfigGenerator.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-01T16:47:10.192Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-01T16:47:10.192Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "GeneratedConfig.cs",
               "DocumentMoniker": "C:\\DEVD\\Repos\\CS2QuickSetup\\ConfigCreator\\ConfigCreator.Core\\Models\\GeneratedConfig.cs",
               "RelativeDocumentMoniker": "ConfigCreator.Core\\Models\\GeneratedConfig.cs",
@@ -67,12 +103,11 @@
               "RelativeToolTip": "ConfigCreator.Core\\Models\\GeneratedConfig.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-01T16:47:04.365Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-01T16:47:04.365Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "ConfigGeneratorUnitTest.cs",
               "DocumentMoniker": "C:\\DEVD\\Repos\\CS2QuickSetup\\ConfigCreator\\Testing\\ConfigGeneratorUnitTest.cs",
               "RelativeDocumentMoniker": "Testing\\ConfigGeneratorUnitTest.cs",
@@ -80,8 +115,7 @@
               "RelativeToolTip": "Testing\\ConfigGeneratorUnitTest.cs",
               "ViewState": "AgIAAIEAAAAAAAAAAAAnwJEAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-01T15:51:10.614Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-01T15:51:10.614Z"
             },
             {
               "$type": "Document",
@@ -91,14 +125,13 @@
               "RelativeDocumentMoniker": "ConfigCreator.Core\\Version.cs",
               "ToolTip": "C:\\DEVD\\Repos\\CS2QuickSetup\\ConfigCreator\\ConfigCreator.Core\\Version.cs",
               "RelativeToolTip": "ConfigCreator.Core\\Version.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-01T15:51:10.627Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-01T15:51:10.627Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "ConfigCreator.App.csproj",
               "DocumentMoniker": "C:\\DEVD\\Repos\\CS2QuickSetup\\ConfigCreator\\ConfigCreator.App\\ConfigCreator.App.csproj",
               "RelativeDocumentMoniker": "ConfigCreator.App\\ConfigCreator.App.csproj",
@@ -110,7 +143,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "ConfigCreator.App",
               "DocumentMoniker": "C:\\DEVD\\Repos\\CS2QuickSetup\\ConfigCreator\\ConfigCreator.App\\ConfigCreator.App.csproj",
               "RelativeDocumentMoniker": "ConfigCreator.App\\ConfigCreator.App.csproj",
@@ -121,7 +154,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "ConfigCreator.Core",
               "DocumentMoniker": "C:\\DEVD\\Repos\\CS2QuickSetup\\ConfigCreator\\ConfigCreator.Core\\ConfigCreator.Core.csproj",
               "RelativeDocumentMoniker": "ConfigCreator.Core\\ConfigCreator.Core.csproj",

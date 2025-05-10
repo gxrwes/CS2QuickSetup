@@ -8,7 +8,7 @@
     ".NETCoreApp,Version=v9.0": {
       "ConfigCreator.App/1.0.0": {
         "dependencies": {
-          "ConfigCreator.Core": "1.0.2"
+          "ConfigCreator.Core": "1.0.3"
         },
         "runtime": {
           "ConfigCreator.App.dll": {}
@@ -22,14 +22,14 @@
           }
         }
       },
-      "ConfigCreator.Core/1.0.2": {
+      "ConfigCreator.Core/1.0.3": {
         "dependencies": {
           "Figgle": "0.5.1"
         },
         "runtime": {
           "ConfigCreator.Core.dll": {
-            "assemblyVersion": "1.0.2",
-            "fileVersion": "1.0.2"
+            "assemblyVersion": "1.0.3",
+            "fileVersion": "1.0.3"
           }
         }
       }
@@ -48,7 +48,7 @@
       "path": "figgle/0.5.1",
       "hashPath": "figgle.0.5.1.nupkg.sha512"
     },
-    "ConfigCreator.Core/1.0.2": {
+    "ConfigCreator.Core/1.0.3": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
