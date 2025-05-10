@@ -1,46 +1,58 @@
 [
-    {
-        "Name": "Minimap Zoom",
-        "CommandBase": "echo Minimap Zoom; alias \"+radar\" \"+use; cl_radar_always_centered 1; cl_radar_scale {0}\"; alias \"-radar\" \"-use; cl_radar_always_centered 0; cl_radar_scale \"{1}\";bind \"{2}\" \"+radar\"",
-        "Parameters": [
-            "0.15",
-            "0.9",
-            "i"
-        ],
-        "ParameterDescription": [
-            "Map Zoom Default",
-            "Map Zoom Clicked",
-            "Button map"
-        ]
-    },
-    {
-        "Name": "Quit Aliases",
-        "CommandBase": "alias \"{0}\" \"{1}\"\nalias \"{2}\" \"{3}\"",
-        "Parameters": [
-            "quit",
-            "exit",
-            "dc",
-            "disconnect"
-        ],
-        "ParameterDescription": [
-            "First alias command name",
-            "First alias command value",
-            "Second alias command name",
-            "Second alias command value"
-        ]
-    },
-    {
-        "Name": "Mute All Sound",
-        "CommandBase": "bind \"{0}\" \"toggle volume {1} {2}\";",
-        "Parameters": [
-            "m",
-            "0",
-            "0.1"
-        ],
-        "ParameterDescription": [
-            "Key to bind",
-            "Volume toggle state",
-            "Volume level to revert to"
-        ]
-    }
+  {
+    "Name": "Minimap Zoom",
+    "CommandBase": "echo Minimap Zoom; alias \"+radar\" \"+use; cl_radar_always_centered 1; cl_radar_scale {0}\"; alias \"-radar\" \"-use; cl_radar_always_centered 0; cl_radar_scale \"{1}\";bind \"{2}\" \"+radar\"",
+    "Parameters": [
+      "0.15",
+      "0.9",
+      "i"
+    ],
+    "ParameterDescription": [
+      "Map Zoom Default",
+      "Map Zoom Clicked",
+      "Button map"
+    ]
+  },
+  {
+    "Name": "Quit Aliases",
+    "CommandBase": "alias \"{0}\" \"{1}\"\nalias \"{2}\" \"{3}\"",
+    "Parameters": [
+      "quit",
+      "exit",
+      "dc",
+      "disconnect"
+    ],
+    "ParameterDescription": [
+      "First alias command name",
+      "First alias command value",
+      "Second alias command name",
+      "Second alias command value"
+    ]
+  },
+  {
+    "Name": "Mute All Comms",
+    "CommandBase": "bind \"{0}\" \"toggle volume {1} {2}\";",
+    "Parameters": [
+      "m",
+      "0",
+      "0.1"
+    ],
+    "ParameterDescription": [
+      "Key to bind",
+      "Volume toggle state",
+      "Volume level to revert to"
+    ]
+  },
+  {
+    "Name": "AutoExecutor",
+    "CommandBase": "bind \"{0}\" \"execute {1}\";",
+    "Parameters": [
+      "o",
+      "autoexec"
+    ],
+    "ParameterDescription": [
+      "Key to bind",
+      "scriptname"
+    ]
+  }
 ]
